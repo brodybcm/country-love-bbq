@@ -1,0 +1,136 @@
+/* ============================================================
+   COUNTRY LOVE SOULFOOD & BBQ — Rustic Southern Theme
+   ============================================================ */
+:root {
+  --bbq-red: #8b1a1a;
+  --bbq-orange: #c94a1a;
+  --bbq-amber: #d4820a;
+  --dark-wood: #1c1008;
+  --wood2: #2a1a0c;
+  --wood3: #351f0e;
+  --cream: #fdf6e3;
+  --tan: #c9a87a;
+  --gray: #9a8a6a;
+  --white: #ffffff;
+  --font-display: 'Abril Fatface', cursive;
+  --font-body: 'Inter', sans-serif;
+  --radius: 10px;
+  --transition: 0.3s ease;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--dark-wood); color: var(--white); font-family: var(--font-body); line-height: 1.7; overflow-x: hidden; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+
+/* NAV */
+.navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 1rem 0; transition: all var(--transition); }
+.navbar.scrolled { background: rgba(28,16,8,0.97); box-shadow: 0 2px 15px rgba(0,0,0,0.6); }
+.nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; }
+.nav-logo { display: flex; align-items: center; gap: 0.7rem; }
+.logo-flame { font-size: 1.8rem; }
+.logo-name { display: flex; flex-direction: column; }
+.logo-main { font-family: var(--font-display); font-size: 1.2rem; line-height: 1.1; color: var(--white); }
+.logo-sub { font-size: 0.58rem; letter-spacing: 2px; color: var(--bbq-amber); text-transform: uppercase; }
+.nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+.nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color var(--transition); }
+.nav-links a:hover { color: var(--bbq-amber); }
+.nav-cta { background: var(--bbq-red) !important; color: var(--white) !important; padding: 0.5rem 1.2rem !important; border-radius: var(--radius); }
+.nav-cta:hover { background: var(--bbq-orange) !important; }
+.hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
+.hamburger span { display: block; width: 24px; height: 2px; background: var(--white); }
+
+/* HERO */
+.hero { position: relative; min-height: 100vh; display: flex; align-items: center; }
+.hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(28,16,8,0.88) 0%, rgba(28,16,8,0.6) 100%); z-index: 1; }
+.hero-content { position: relative; z-index: 2; max-width: 700px; padding: 0 2rem 0 6rem; }
+.hero-tag { display: inline-block; background: var(--bbq-amber); color: var(--dark-wood); padding: 0.4rem 1rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1.5rem; }
+.hero-title { font-family: var(--font-display); font-size: clamp(3rem, 8vw, 6rem); line-height: 1.05; margin-bottom: 1.5rem; }
+.hero-accent { color: var(--bbq-amber); display: block; }
+.hero-sub { font-size: 1rem; color: rgba(255,255,255,0.75); margin-bottom: 2.5rem; max-width: 520px; }
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+.hero-hours-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(255,255,255,0.08); border: 1px solid rgba(212,130,10,0.4); color: var(--bbq-amber); padding: 0.6rem 1.2rem; border-radius: 25px; font-size: 0.82rem; font-weight: 600; }
+
+/* BUTTONS */
+.btn { display: inline-flex; align-items: center; padding: 0.9rem 2rem; border-radius: var(--radius); font-weight: 700; text-decoration: none; font-size: 0.88rem; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; border: none; transition: all var(--transition); }
+.btn-primary { background: var(--bbq-orange); color: var(--white); }
+.btn-primary:hover { background: #e05520; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(201,74,26,0.4); }
+.btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.35); }
+.btn-outline:hover { border-color: var(--bbq-amber); color: var(--bbq-amber); }
+
+/* SPECIALTY BANNER */
+.specialty-banner { background: var(--bbq-red); padding: 1.5rem 0; display: flex; justify-content: space-evenly; flex-wrap: wrap; gap: 0; }
+.sb-item { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; padding: 0 1.5rem; }
+.sb-item img { width: 40px; height: 40px; }
+.sb-item span { font-size: 0.72rem; font-weight: 700; color: rgba(255,255,255,0.9); white-space: nowrap; letter-spacing: 1px; text-transform: uppercase; }
+
+/* SECTION HEADERS */
+.section-header { text-align: center; margin-bottom: 3.5rem; }
+.section-eyebrow { font-size: 0.72rem; letter-spacing: 4px; text-transform: uppercase; color: var(--bbq-amber); margin-bottom: 0.7rem; font-weight: 700; }
+.section-title { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.5rem); }
+.section-desc { color: var(--gray); max-width: 520px; margin: 1rem auto 0; font-size: 0.9rem; }
+
+/* MENU */
+.menu-section { padding: 6rem 0; background: var(--wood2); }
+.menu-cols { display: grid; grid-template-columns: 1.5fr 2fr 1fr; gap: 3rem; }
+.menu-col h3.menu-cat { font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase; color: var(--bbq-amber); margin-bottom: 1.5rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--bbq-amber); }
+.menu-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+.menu-row strong { display: block; font-size: 0.9rem; margin-bottom: 0.2rem; }
+.menu-row p { color: var(--gray); font-size: 0.78rem; line-height: 1.5; }
+.menu-row span { color: var(--bbq-amber); font-weight: 700; font-size: 0.9rem; flex-shrink: 0; }
+
+/* ABOUT */
+.about { padding: 6rem 0; background: var(--dark-wood); }
+.about-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.about-text p { color: var(--gray); margin-bottom: 1.5rem; font-size: 0.95rem; }
+.testimonials { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1rem; }
+.testi-card { background: var(--wood3); border-left: 3px solid var(--bbq-amber); padding: 1.5rem; border-radius: 0 var(--radius) var(--radius) 0; }
+.testi-card p { color: var(--white); font-style: italic; font-size: 0.88rem; margin-bottom: 0.8rem; }
+.testi-card strong { color: var(--bbq-amber); font-size: 0.78rem; }
+.about-img { position: relative; border-radius: var(--radius); overflow: hidden; }
+.about-img img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius); }
+.about-overlay-card { position: absolute; bottom: 1.5rem; left: 1.5rem; background: rgba(28,16,8,0.92); backdrop-filter: blur(5px); padding: 1.2rem 1.5rem; border-radius: var(--radius); border-left: 3px solid var(--bbq-amber); }
+.about-overlay-card div { font-size: 1.5rem; margin-bottom: 0.3rem; }
+.about-overlay-card strong { display: block; color: var(--white); font-size: 0.85rem; margin-bottom: 0.2rem; }
+.about-overlay-card p { color: var(--tan); font-size: 0.78rem; margin: 0; }
+
+/* HOURS */
+.hours { padding: 6rem 0; background: var(--wood2); }
+.hours-layout { display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem; align-items: start; }
+.hours-info .section-title { font-size: 2.5rem; margin-bottom: 1.5rem; }
+.hours-badge { display: inline-block; background: var(--bbq-red); color: var(--white); padding: 0.4rem 1.2rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2rem; }
+.hours-detail { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.5rem; }
+.hours-detail span { font-size: 1.5rem; }
+.hours-detail strong { display: block; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 1px; color: var(--bbq-amber); margin-bottom: 0.3rem; }
+.hours-detail p { color: var(--gray); font-size: 0.9rem; line-height: 1.6; }
+.sold-out-note { color: var(--bbq-orange); font-size: 0.82rem; font-weight: 600; margin-top: 0.5rem; }
+.order-section { background: var(--wood3); border-radius: var(--radius); padding: 2.5rem; border: 1px solid rgba(255,255,255,0.05); }
+.order-section h3 { font-family: var(--font-display); font-size: 1.8rem; color: var(--bbq-amber); margin-bottom: 0.8rem; }
+.order-section p { color: var(--gray); margin-bottom: 1.5rem; font-size: 0.88rem; }
+.order-options { display: flex; flex-direction: column; gap: 1rem; }
+.order-btn { display: flex; align-items: center; gap: 1rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius); padding: 1rem 1.3rem; text-decoration: none; color: var(--white); transition: all var(--transition); }
+.order-btn:hover { background: var(--bbq-orange); border-color: var(--bbq-orange); }
+.order-icon { font-size: 1.5rem; }
+.order-btn strong { display: block; font-size: 0.9rem; }
+.order-btn small { color: rgba(255,255,255,0.6); font-size: 0.75rem; }
+.order-note { color: var(--gray); font-size: 0.78rem; margin-top: 1.2rem !important; }
+
+/* FOOTER */
+.footer { background: #100800; padding: 3rem 0 0; }
+.footer-inner { display: flex; justify-content: space-between; align-items: center; padding-bottom: 2rem; flex-wrap: wrap; gap: 2rem; }
+.footer-logo { font-family: var(--font-display); font-size: 1.2rem; color: var(--bbq-amber); margin-bottom: 0.5rem; }
+.footer p, .footer-right p { color: var(--gray); font-size: 0.82rem; }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.05); padding: 1.5rem; text-align: center; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .menu-cols { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .nav-links { display: none; position: fixed; inset: 0; top: 60px; background: rgba(28,16,8,0.98); flex-direction: column; justify-content: center; align-items: center; gap: 2rem; }
+  .nav-links.open { display: flex; }
+  .hamburger { display: flex; }
+  .hero-content { padding: 0 2rem; }
+  .about-inner, .hours-layout { grid-template-columns: 1fr; }
+}
